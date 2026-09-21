@@ -3,22 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Namastê · Estética Corporal & Spa Urbano em Candangolândia</title>
-  <meta name="description" content="Descubra o refúgio perfeito de bem-estar na Candangolândia. Spa ofurô, vinhoterapia, crioterapia facial e terapias corporais exclusivas." />
+  <title>Namastê · Estética Corporal & Spa Urbano</title>
+  <meta name="description" content="Spa ofurô, vinhoterapia, crioterapia e massoterapia especializada na Candangolândia - DF." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #2b3a33;
-      --primary-dark: #1b2621;
-      --accent: #9a764d;
-      --accent-light: #dfd4c4;
-      --bg: #f9f8f5;
+      --primary: #25332c;
+      --primary-dark: #17211c;
+      --accent: #9d7348;
+      --accent-soft: #f2ede4;
+      --bg: #faf9f6;
       --surface: #ffffff;
-      --text: #2f3432;
-      --muted: #6b7570;
-      --border: #e8e4dc;
+      --text: #2c3330;
+      --muted: #66706b;
+      --border: #e6e0d5;
       --whatsapp: #25d366;
       --whatsapp-hover: #1ebd5a;
     }
@@ -28,31 +28,32 @@
     header {
       position: sticky;
       top: 0;
-      background: rgba(249, 248, 245, 0.95);
+      background: rgba(250, 249, 246, 0.96);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
       z-index: 100;
-      padding: 1.1rem 1.5rem;
+      padding: 1rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       max-width: 1200px;
       margin: 0 auto;
     }
-    .logo-box { text-decoration: none; display: flex; flex-direction: column; }
+    .logo-box { text-decoration: none; }
     .brand-title {
       font-family: 'Cinzel', serif;
-      font-size: 1.45rem;
+      font-size: 1.4rem;
       letter-spacing: 2px;
       font-weight: 700;
       color: var(--primary);
     }
     .brand-sub {
-      font-size: 0.72rem;
+      display: block;
+      font-size: 0.7rem;
       text-transform: uppercase;
       letter-spacing: 3px;
       color: var(--accent);
-      font-weight: 600;
+      font-weight: 700;
     }
     .btn-header {
       background: var(--primary);
@@ -69,32 +70,32 @@
     .hero {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 4.5rem 1.5rem 4rem;
+      padding: 4rem 1.5rem 3.5rem;
       display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
+      grid-template-columns: 1.05fr 0.95fr;
       gap: 3.5rem;
       align-items: center;
     }
-    @media (max-width: 860px) {
+    @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; text-align: center; padding: 2.5rem 1.25rem; }
     }
-    .tag {
+    .badge {
       display: inline-flex;
       align-items: center;
       gap: 0.4rem;
-      background: #efe9df;
+      background: var(--accent-soft);
       color: var(--accent);
       padding: 0.4rem 1rem;
       border-radius: 999px;
       font-size: 0.8rem;
       font-weight: 700;
-      margin-bottom: 1.2rem;
-      letter-spacing: 1px;
       text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1.2rem;
     }
     .hero h1 {
       font-family: 'Cinzel', serif;
-      font-size: 2.8rem;
+      font-size: 2.7rem;
       line-height: 1.2;
       color: var(--primary);
       margin-bottom: 1.2rem;
@@ -103,8 +104,9 @@
       color: var(--muted);
       font-size: 1.05rem;
       margin-bottom: 2rem;
-      max-width: 540px;
+      max-width: 530px;
     }
+    @media (max-width: 900px) { .hero p { margin-left: auto; margin-right: auto; } }
     .btn-whatsapp {
       background: var(--whatsapp);
       color: white;
@@ -121,33 +123,82 @@
     }
     .btn-whatsapp:hover { background: var(--whatsapp-hover); transform: translateY(-2px); }
 
-    .hero-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
+    /* Visual Hero com Foto Real do Ofurô */
+    .hero-photo-wrapper {
+      position: relative;
       border-radius: 24px;
-      padding: 2rem;
-      box-shadow: 0 20px 40px rgba(43, 58, 51, 0.06);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 20px 45px rgba(37, 51, 44, 0.12);
+      background: white;
     }
-    .hero-card h3 {
-      font-family: 'Cinzel', serif;
-      font-size: 1.3rem;
+    .hero-photo-wrapper img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      display: block;
+    }
+    .hero-photo-caption {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      padding: 0.9rem 1.2rem;
+      border-radius: 14px;
+      font-size: 0.88rem;
       color: var(--primary);
-      margin-bottom: 1.2rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.8rem;
-    }
-    .experience-list { list-style: none; display: flex; flex-direction: column; gap: 0.85rem; }
-    .experience-list li {
+      font-weight: 600;
+      border: 1px solid rgba(230, 224, 213, 0.8);
       display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 0.75rem;
-      font-size: 0.95rem;
-      color: var(--text);
     }
-    .experience-list span { color: var(--accent); font-size: 1.1rem; }
 
+    /* Galeria com fotos reais dos tratamentos */
+    .gallery-section {
+      max-width: 1200px;
+      margin: 1rem auto 4rem;
+      padding: 0 1.5rem;
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .gallery-card {
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+      transition: 0.25s;
+    }
+    .gallery-card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .gallery-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+    .gallery-card-body {
+      padding: 1.2rem;
+    }
+    .gallery-card-body h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      color: var(--primary);
+      margin-bottom: 0.3rem;
+    }
+    .gallery-card-body p {
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    /* Lista completa dos serviços */
     .services {
-      background: var(--surface);
+      background: white;
       padding: 5rem 1.5rem;
       border-top: 1px solid var(--border);
       border-bottom: 1px solid var(--border);
@@ -184,17 +235,17 @@
       padding: 2rem;
       transition: 0.25s;
     }
-    .card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 12px 30px rgba(154, 118, 77, 0.1); }
+    .card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 10px 25px rgba(157, 115, 72, 0.08); }
     .card-icon {
-      width: 48px;
-      height: 48px;
-      background: #ece7de;
+      width: 46px;
+      height: 46px;
+      background: var(--accent-soft);
       color: var(--accent);
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       margin-bottom: 1.2rem;
     }
     .card h3 {
@@ -209,7 +260,7 @@
       max-width: 1150px;
       margin: 4.5rem auto;
       padding: 2.5rem 2rem;
-      background: #ece8e1;
+      background: var(--accent-soft);
       border-radius: 20px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -222,7 +273,7 @@
       color: var(--primary);
       margin-bottom: 0.4rem;
     }
-    .loc-box p { font-size: 0.92rem; color: #49524e; }
+    .loc-box p { font-size: 0.92rem; color: #444c48; }
 
     footer {
       text-align: center;
@@ -237,89 +288,116 @@
   <header>
     <a href="#" class="logo-box">
       <div class="brand-title">NAMASTÊ</div>
-      <span class="brand-sub">Estética Corporal</span>
+      <span class="brand-sub">Estética Corporal & Spa</span>
     </a>
     <a href="https://wa.me/5561983586609?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Namastê" target="_blank" class="btn-header">Agendar Spa</a>
   </header>
 
   <section class="hero">
     <div>
-      <span class="tag">🌿 Spa & Estética Corporal em Candangolândia</span>
-      <h1>Seu momento exclusivo de relaxamento e renovação.</h1>
-      <p>Um refúgio acolhedor com terapias corporais exclusivas, rituais de ofurô, alívio de tensões e estética avançada para revitalizar seu corpo e sua mente.</p>
-      <a href="https://wa.me/5561983586609?text=Olá!%20Gostaria%20de%20conhecer%20os%20protocolos%20e%20agendar%20uma%20sessão" target="_blank" class="btn-whatsapp">
-        💬 Agende sua Sessão pelo WhatsApp
+      <span class="badge">🌿 Spa & Bem-Estar em Candangolândia</span>
+      <h1>Seu refúgio exclusivo de relaxamento e renovação.</h1>
+      <p>Rituais terapêuticos de ofurô, vinhoterapia exclusiva, alívio profundo de tensões e estética avançada para revitalizar seu corpo e elevar sua energia.</p>
+      <a href="https://wa.me/5561983586609?text=Olá!%20Gostaria%20de%20conhecer%20os%20protocolos%20e%20agendar%20um%20horário" target="_blank" class="btn-whatsapp">
+        💬 Agendar Atendimento no WhatsApp
       </a>
     </div>
 
-    <div class="hero-card">
-      <h3>Destaques & Rituais de Bem-Estar</h3>
-      <ul class="experience-list">
-        <li><span>✦</span> <strong>Spa Ofurô & Hidroterapia:</strong> Imersão relaxante para alívio total do estresse.</li>
-        <li><span>✦</span> <strong>Vinhoterapia Exclusiva:</strong> Ritual antioxidante e revitalizante.</li>
-        <li><span>✦</span> <strong>Aparelho Excel & Bambuterapia:</strong> Modelagem corporal e relaxamento profundo.</li>
-        <li><span>✦</span> <strong>Crioterapia & Limpeza Facial Natural:</strong> Pele fresca, tonificada e purificada.</li>
-      </ul>
+    <div class="hero-photo-wrapper">
+      <img src="ofuro.jpg" alt="Spa Ofurô Relaxante Namastê" onerror="this.src='https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80'" />
+      <div class="hero-photo-caption">
+        <span>🛁 Spa Ofurô Relaxante</span>
+        <span style="color: var(--accent);">Ambiente Reservado</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria com fotos reais -->
+  <section class="gallery-section">
+    <div class="gallery-grid">
+      <div class="gallery-card">
+        <img src="vinhoterapia.jpg" alt="Vinhoterapia Namastê" onerror="this.src='https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=600&q=80'" />
+        <div class="gallery-card-body">
+          <h4>Vinhoterapia</h4>
+          <p>Tratamento antioxidante rico em polifenóis que revigoram a firmeza e a luminosidade da pele.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="pedras.jpg" alt="Terapia com Pedras Quentes" onerror="this.src='https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80'" />
+        <div class="gallery-card-body">
+          <h4>Pedras & Cromoterapia</h4>
+          <p>Alívio de contraturas musculares profundas através de pedras aquecidas e equilíbrio sensorial.</p>
+        </div>
+      </div>
+
+      <div class="gallery-card">
+        <img src="bambu.jpg" alt="Bambuterapia Corporal" onerror="this.src='https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=80'" />
+        <div class="gallery-card-body">
+          <h4>Bambuterapia Corporal</h4>
+          <p>Manobras firmes com hastes de bambu que estimulam a drenagem corporal e ativam a circulação.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="services">
     <div class="section-title">
-      <span>Rituais & Procedimentos</span>
-      <h2>Nossos Serviços</h2>
+      <span>Protocolos Especializados</span>
+      <h2>Procedimentos e Terapias</h2>
     </div>
 
     <div class="grid">
       <div class="card">
         <div class="card-icon">🛁</div>
         <h3>Hidroterapia (Spa Ofurô)</h3>
-        <p>Banho de imersão terapêutico que ativa a circulação, alivia a fadiga física e induz a um estado profundo de relaxamento mental.</p>
+        <p>Banho de imersão terapêutico aromatizado para desconectar a mente e aliviar o cansaço físico acumulado.</p>
       </div>
 
       <div class="card">
         <div class="card-icon">🍷</div>
         <h3>Vinhoterapia</h3>
-        <p>Tratamento com polifenóis da uva que combatem o envelhecimento precoce da pele, restaurando o tônus e a luminosidade corporal.</p>
+        <p>Ritual estético exclusivo com ativos nobres da uva para desintoxicação dérmica e efeito rejuvenescedor.</p>
       </div>
 
       <div class="card">
         <div class="card-icon">⚡</div>
         <h3>Massagem com Aparelho Excel</h3>
-        <p>Tecnologia combinada para estimular o sistema circulatório, remodelar áreas corporais e potencializar os resultados estéticos.</p>
+        <p>Tecnologia mecânica combinada para otimização da quebra de gordura localizada e definição muscular.</p>
       </div>
 
       <div class="card">
         <div class="card-icon">❄️</div>
         <h3>Crioterapia Facial</h3>
-        <p>Estímulo térmico controlado que descongestiona a pele, diminui poros dilatados e suaviza linhas de expressão com efeito tensor imediato.</p>
+        <p>Estímulo térmico que fecha os poros, desincha o rosto, firma o tecido e traz viço imediato à pele.</p>
       </div>
 
       <div class="card">
         <div class="card-icon">🪵</div>
         <h3>Bambuterapia & Pedras Quentes</h3>
-        <p>Alinhamento energético e relaxamento muscular profundo utilizando manobras manuais aquecidas e relaxantes.</p>
+        <p>Fusão de manobras clássicas com elementos naturais para relaxamento profundo das costas e ombros.</p>
       </div>
 
       <div class="card">
         <div class="card-icon">🌱</div>
         <h3>Escalda-pés & Limpeza de Pele Natural</h3>
-        <p>Desintoxicação corporal com sais aromáticos combinada a cuidados faciais suaves e livres de agressões químicas.</p>
+        <p>Cuidado completo de extremidades e renovação cutânea com cosméticos botânicos suaves.</p>
       </div>
     </div>
   </section>
 
   <div class="location-banner">
     <div class="loc-box">
-      <h4>📍 Localização</h4>
+      <h4>📍 Endereço</h4>
       <p>QR 3 Conjunto D Loja 68 - Candangolândia<br>Brasília - DF · CEP 71725-300</p>
     </div>
     <div class="loc-box">
-      <h4>⏰ Funcionamento</h4>
-      <p>Aberto até as 18:00<br>Atendimentos com horário agendado</p>
+      <h4>⏰ Atendimento</h4>
+      <p>Segunda a Sábado até as 18:00<br>Sessões reservadas com antecedência</p>
     </div>
     <div class="loc-box">
-      <h4>📱 Contato Direto</h4>
-      <p>WhatsApp: (61) 98358-6609<br>Ambiente reservado e tranquilo</p>
+      <h4>📱 Agendamentos</h4>
+      <p>WhatsApp: (61) 98358-6609<br>Ambiente climatizado e privativo</p>
     </div>
   </div>
 
