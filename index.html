@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Namastê · Estética Corporal & Spa Urbano em Candangolândia</title>
+  <meta name="description" content="Descubra o refúgio perfeito de bem-estar na Candangolândia. Spa ofurô, vinhoterapia, crioterapia facial e terapias corporais exclusivas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2b3a33;
+      --primary-dark: #1b2621;
+      --accent: #9a764d;
+      --accent-light: #dfd4c4;
+      --bg: #f9f8f5;
+      --surface: #ffffff;
+      --text: #2f3432;
+      --muted: #6b7570;
+      --border: #e8e4dc;
+      --whatsapp: #25d366;
+      --whatsapp-hover: #1ebd5a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
+    body { color: var(--text); background: var(--bg); line-height: 1.6; }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(249, 248, 245, 0.95);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .logo-box { text-decoration: none; display: flex; flex-direction: column; }
+    .brand-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.45rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .brand-sub {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .btn-header {
+      background: var(--primary);
+      color: white;
+      padding: 0.65rem 1.4rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+    .btn-header:hover { background: var(--primary-dark); }
+
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; text-align: center; padding: 2.5rem 1.25rem; }
+    }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #efe9df;
+      color: var(--accent);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.8rem;
+      line-height: 1.2;
+      color: var(--primary);
+      margin-bottom: 1.2rem;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 2rem;
+      max-width: 540px;
+    }
+    .btn-whatsapp {
+      background: var(--whatsapp);
+      color: white;
+      padding: 1rem 2.2rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      box-shadow: 0 4px 18px rgba(37, 211, 102, 0.3);
+      transition: 0.2s;
+    }
+    .btn-whatsapp:hover { background: var(--whatsapp-hover); transform: translateY(-2px); }
+
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(43, 58, 51, 0.06);
+    }
+    .hero-card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.3rem;
+      color: var(--primary);
+      margin-bottom: 1.2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.8rem;
+    }
+    .experience-list { list-style: none; display: flex; flex-direction: column; gap: 0.85rem; }
+    .experience-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+    .experience-list span { color: var(--accent); font-size: 1.1rem; }
+
+    .services {
+      background: var(--surface);
+      padding: 5rem 1.5rem;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .section-title {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 3.5rem;
+    }
+    .section-title span {
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: var(--accent);
+    }
+    .section-title h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-top: 0.4rem;
+    }
+    .grid {
+      max-width: 1150px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.75rem;
+    }
+    .card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 2rem;
+      transition: 0.25s;
+    }
+    .card:hover { transform: translateY(-4px); border-color: var(--accent); box-shadow: 0 12px 30px rgba(154, 118, 77, 0.1); }
+    .card-icon {
+      width: 48px;
+      height: 48px;
+      background: #ece7de;
+      color: var(--accent);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.2rem;
+    }
+    .card h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+    .card p { font-size: 0.92rem; color: var(--muted); }
+
+    .location-banner {
+      max-width: 1150px;
+      margin: 4.5rem auto;
+      padding: 2.5rem 2rem;
+      background: #ece8e1;
+      border-radius: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      border: 1px solid var(--border);
+    }
+    .loc-box h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 0.4rem;
+    }
+    .loc-box p { font-size: 0.92rem; color: #49524e; }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="#" class="logo-box">
+      <div class="brand-title">NAMASTÊ</div>
+      <span class="brand-sub">Estética Corporal</span>
+    </a>
+    <a href="https://wa.me/5561983586609?text=Olá!%20Gostaria%20de%20agendar%20um%20horário%20na%20Namastê" target="_blank" class="btn-header">Agendar Spa</a>
+  </header>
+
+  <section class="hero">
+    <div>
+      <span class="tag">🌿 Spa & Estética Corporal em Candangolândia</span>
+      <h1>Seu momento exclusivo de relaxamento e renovação.</h1>
+      <p>Um refúgio acolhedor com terapias corporais exclusivas, rituais de ofurô, alívio de tensões e estética avançada para revitalizar seu corpo e sua mente.</p>
+      <a href="https://wa.me/5561983586609?text=Olá!%20Gostaria%20de%20conhecer%20os%20protocolos%20e%20agendar%20uma%20sessão" target="_blank" class="btn-whatsapp">
+        💬 Agende sua Sessão pelo WhatsApp
+      </a>
+    </div>
+
+    <div class="hero-card">
+      <h3>Destaques & Rituais de Bem-Estar</h3>
+      <ul class="experience-list">
+        <li><span>✦</span> <strong>Spa Ofurô & Hidroterapia:</strong> Imersão relaxante para alívio total do estresse.</li>
+        <li><span>✦</span> <strong>Vinhoterapia Exclusiva:</strong> Ritual antioxidante e revitalizante.</li>
+        <li><span>✦</span> <strong>Aparelho Excel & Bambuterapia:</strong> Modelagem corporal e relaxamento profundo.</li>
+        <li><span>✦</span> <strong>Crioterapia & Limpeza Facial Natural:</strong> Pele fresca, tonificada e purificada.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="section-title">
+      <span>Rituais & Procedimentos</span>
+      <h2>Nossos Serviços</h2>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon">🛁</div>
+        <h3>Hidroterapia (Spa Ofurô)</h3>
+        <p>Banho de imersão terapêutico que ativa a circulação, alivia a fadiga física e induz a um estado profundo de relaxamento mental.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🍷</div>
+        <h3>Vinhoterapia</h3>
+        <p>Tratamento com polifenóis da uva que combatem o envelhecimento precoce da pele, restaurando o tônus e a luminosidade corporal.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">⚡</div>
+        <h3>Massagem com Aparelho Excel</h3>
+        <p>Tecnologia combinada para estimular o sistema circulatório, remodelar áreas corporais e potencializar os resultados estéticos.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">❄️</div>
+        <h3>Crioterapia Facial</h3>
+        <p>Estímulo térmico controlado que descongestiona a pele, diminui poros dilatados e suaviza linhas de expressão com efeito tensor imediato.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🪵</div>
+        <h3>Bambuterapia & Pedras Quentes</h3>
+        <p>Alinhamento energético e relaxamento muscular profundo utilizando manobras manuais aquecidas e relaxantes.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">🌱</div>
+        <h3>Escalda-pés & Limpeza de Pele Natural</h3>
+        <p>Desintoxicação corporal com sais aromáticos combinada a cuidados faciais suaves e livres de agressões químicas.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="location-banner">
+    <div class="loc-box">
+      <h4>📍 Localização</h4>
+      <p>QR 3 Conjunto D Loja 68 - Candangolândia<br>Brasília - DF · CEP 71725-300</p>
+    </div>
+    <div class="loc-box">
+      <h4>⏰ Funcionamento</h4>
+      <p>Aberto até as 18:00<br>Atendimentos com horário agendado</p>
+    </div>
+    <div class="loc-box">
+      <h4>📱 Contato Direto</h4>
+      <p>WhatsApp: (61) 98358-6609<br>Ambiente reservado e tranquilo</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 Namastê - Estética Corporal · Candangolândia, Brasília - DF</p>
+  </footer>
+
+</body>
+</html>
